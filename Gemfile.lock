@@ -390,6 +390,7 @@ DEPENDENCIES
   omniauth
   pubsubhubbub
   rails (= 3.0.1)
+  rest-client
   roxml!
   rspec (>= 2.0.0)
   rspec-instafail
