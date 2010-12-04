@@ -14,6 +14,8 @@ describe PublicsController do
     let(:xml) { "<walruses></walruses>" }
      context 'success cases' do
       it 'should 200 on successful receipt of a request' do
+        Resque.stub!(:enqueue).and_return(true) #should not need to do this with fantasy_resque working
+
         post :receive, :id =>user.person.id, :xml => xml
         response.code.should == '200'
       end
